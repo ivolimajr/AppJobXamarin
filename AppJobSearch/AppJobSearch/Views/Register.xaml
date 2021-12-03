@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppJobSearch.Views.Register">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <!-- start:header-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label 
+                    Text="JobSearch" 
+                    Style="{StaticResource Title}" 
+                    Grid.Column="1" />
+                <ImageButton 
+                    Style="{StaticResource BackButton}"                   
+                    Clicked="btnLoginPage" />
+            </Grid>
+            <BoxView Color="#D7CCFF" HeightRequest="1"/>
+            <!-- end:header-->
+
+            <!-- start:LoginForm-->
+            <Grid VerticalOptions="CenterAndExpand" RowSpacing="20">
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label Text="Dados inválidos"
+                       x:Name="lbErrorMessage"
+                       IsVisible="false"
+                       Grid.Row="0" 
+                       Grid.ColumnSpan="2" 
+                       HorizontalTextAlignment="Center" 
+                       TextColor="{StaticResource Danger}"/>
+                <Frame StyleClass="EntryFrame" Grid.Row="1" Grid.ColumnSpan="2" >
+                    <Entry 
+                        Placeholder="Nome"
+                        x:Name="txtName"   />
+                </Frame>
+                <Frame StyleClass="EntryFrame" Grid.Row="2" Grid.ColumnSpan="2" >
+                    <Entry 
+                        Placeholder="Email"
+                        x:Name="txtEmail"/>
+                </Frame>
+                <Frame StyleClass="EntryFrame" Grid.Row="3" Grid.ColumnSpan="2" >
+                    <Entry 
+                        Placeholder="Senha"
+                        IsPassword="True"
+                        x:Name="txtPassWord"/>
+                </Frame>               
+                
+                <Button 
+                    Text="Cadastrar" 
+                    Clicked="btnSalvar" 
+                    Grid.Row="4" 
+                    Grid.Column="0" 
+                    Grid.ColumnSpan="2"/>
+                
+            </Grid>
+            <!-- end:LoginForm-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

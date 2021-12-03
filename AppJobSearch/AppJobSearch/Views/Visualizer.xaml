@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="AppJobSearch.Views.Visualizer">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <!-- start:header-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Label 
+					Text="JobSearch" 
+					Style="{StaticResource Title}" 
+					Grid.Column="1" />
+                <ImageButton 
+					Style="{StaticResource BackButton}"
+					Clicked="btnStartPage" />
+            </Grid>
+            <BoxView Color="#D7CCFF" HeightRequest="1"/>
+            <!-- end:header-->
+
+            <ScrollView>
+                <StackLayout>
+                    <!-- start:body-->
+                    <Grid RowSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <Label Text="Digital Ocean"
+						   Style="{StaticResource TextSecondary}"/>
+                        <Label Text="Pub. 08/02/2020"
+					   Grid.Column="1"
+					   HorizontalOptions="End"
+					   Style="{StaticResource TextPrimary}"/>
+
+                        <Label Text="Back-End Develop"
+						   Grid.Row="1"
+						   Style="{StaticResource TextPrimary}"/>
+                        <Label Grid.Column="1"
+					   Grid.Row="1"
+					   HorizontalOptions="End"
+					   Style="{StaticResource IdLabel}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="id. "/>
+                                    <Span Text="1857"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                        <Label Text="São Paulo, SP"
+						   Grid.Row="2"
+						   Style="{StaticResource TextSecondary}"/>
+
+                        <Label Grid.Row="3" Grid.ColumnSpan="2">
+                            <Label.FormattedText>
+                                <FormattedString >
+                                    <Span Text="7.0-11k " Style="{StaticResource MoneyLabel}" FontSize="14"/>
+                                    <Span Text="BRL" Style="{StaticResource CurrencyLabel}" FontSize="14"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label Text="CLT"
+					   Grid.Row="4"
+					   Style="{StaticResource TextPrimary}"/>
+
+                        <Label Text="Tags" Grid.Row="5"/>
+                    </Grid>
+                    <!-- end:body-->
+
+                    <Label Text="Interessados enviar e-mail para" Style="{StaticResource TextPrimary}"/>
+                    <Label Text="job@digitalocean.com.br" Style="{StaticResource TextSecondary}"/>
+                    <BoxView Color="#D7CCFF" HeightRequest="1"/>
+
+                    <Label Text="Descrição da empresa" Style="{StaticResource TitlePrimary}" Padding="0,15,0,0"/>
+                    <Label Text="O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar a 
+				   reestruturação dos paradigmas corporativos.
+				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar a 
+				   reestruturação dos paradigmas corporativos.
+				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
+				   a reestruturação dos paradigmas corporativos.
+				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
+				   a reestruturação dos paradigmas corporativos.
+				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
+				   a reestruturação dos paradigmas corporativos.
+				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
+				   a reestruturação dos paradigmas corporativos.
+				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
+				   a reestruturação dos paradigmas corporativos.
+				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
+				   a reestruturação dos paradigmas corporativos.
+				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
+				   a reestruturação dos paradigmas corporativos.
+				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
+				   a reestruturação dos paradigmas corporativos.
+				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar a 
+				   reestruturação dos paradigmas corporativos.
+				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
+				   a reestruturação dos paradigmas corporativos.
+				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
+				   a reestruturação dos paradigmas corporativos.
+				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
+				   a reestruturação dos paradigmas corporativos.
+				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
+				   a reestruturação dos paradigmas corporativos.
+				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
+				   a reestruturação dos paradigmas corporativos.
+				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
+				   a reestruturação dos paradigmas corporativos.
+				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
+				   a reestruturação dos paradigmas corporativos.
+				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
+				   a reestruturação dos paradigmas corporativos.
+				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar a 
+				   reestruturação dos paradigmas corporativos.
+				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
+				   a reestruturação dos paradigmas corporativos.
+				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
+				   a reestruturação dos paradigmas corporativos.
+				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
+				   a reestruturação dos paradigmas corporativos.
+				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
+				   a reestruturação dos paradigmas corporativos.
+				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
+				   a reestruturação dos paradigmas corporativos." Style="{StaticResource TextPrimary}"/>
+                    <Label Text="Descrição do Trabalho" Style="{StaticResource TitlePrimary}" Padding="0,15,0,0"/>
+                    <Label Text="Implementar novas tecnologias de gerenciamento de servidores, fazer integração com ferramentas de VM" Style="{StaticResource TextPrimary}"/>
+                    <Label Text="Benefícios" Style="{StaticResource TitlePrimary}" Padding="0,15,0,0"/>
+                    <Label Text="Vale transporte e vale alimentação" Style="{StaticResource TextPrimary}"/>
+                </StackLayout>
+            </ScrollView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

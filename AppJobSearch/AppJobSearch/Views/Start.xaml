@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppJobSearch.Views.Start"
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <!-- start:header-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label 
+                    Text="JobSearch" 
+                    Style="{StaticResource Title}" 
+                    VerticalOptions="Center"
+                    />
+                <Button 
+                    Grid.Column="1"
+                    HorizontalOptions="Center"
+                    Clicked="btnLogout"
+                    ImageSource="logout.png"
+                    StyleClass="AddButton"/>
+                <Button 
+                    StyleClass="AddButton"
+                    Text="+ Add Job"
+                    Clicked="btnAddJob" 
+                    Grid.Column="1" 
+                    Grid.ColumnSpan="2"
+                    HorizontalOptions="End"/>
+            </Grid>
+            <BoxView Color="#D7CCFF" HeightRequest="1"/>
+            <!-- end:header-->
+
+            <!-- start:Search-->
+            <Grid Margin="0,10,0,10">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Frame StyleClass="EntryFrame" Grid.Row="0" Grid.ColumnSpan="2" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <ImageButton StyleClass="SearchButton" Clicked="btnFocusPesquisa"/>
+                        <Entry Placeholder="Pesquisa" Grid.Column="1" x:Name="txtPesquisa"/>
+                    </Grid>
+                </Frame>
+                <Frame StyleClass="EntryFrame" Grid.Row="1" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <ImageButton StyleClass="PinButton" Clicked="btnFocusCidadeEstado"/>
+                        <Entry Placeholder="Cidade/Estado" Grid.Column="1" x:Name="txtCidadeEstado"/>
+                    </Grid>
+                </Frame>
+                <Button Text="Pesquisar" Clicked="btnSearch" Grid.Row="1" Grid.Column="1"/>
+
+            </Grid>
+            <!-- end:Search-->
+             
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="2 resultados em "
+                           Style="{StaticResource TextPrimary}"/>
+                        <Span Text="São Paulo, SP"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <pancake:PancakeView BackgroundColor="{StaticResource White}" Padding="15" Margin="4">
+                <pancake:PancakeView.Shadow>
+                    <pancake:DropShadow Offset="0,0" />
+                </pancake:PancakeView.Shadow>
+                <pancake:PancakeView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="btnVisualizerPage" />
+                </pancake:PancakeView.GestureRecognizers>
+                <Grid RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Label Text="Digital Ocean"
+                           Grid.ColumnSpan="2"
+                           Style="{StaticResource TextSecondary}"/>
+                    <Label Text="Back-End Develop"
+                           Grid.Row="1"
+                           Style="{StaticResource TextPrimary}"/>
+                    <Label Text="São Paulo, SP"
+                           Grid.Row="2"
+                           Style="{StaticResource TextSecondary}"/>
+                    <Label Text="Tags"
+                           Grid.Row="3"/>
+
+                    <Label Grid.Column="1"
+                           Grid.Row="1"
+                           HorizontalOptions="End">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="7.0-11k " Style="{StaticResource TitlePrimary}"/>
+                                <Span Text="BRL" Style="{StaticResource CurrencyLabel}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label Grid.Column="1"
+                           Grid.Row="3"
+                           VerticalOptions="End"
+                           HorizontalOptions="End" Style="{StaticResource IdLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="id. "/>
+                                <Span Text="1857"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </Grid>
+            </pancake:PancakeView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

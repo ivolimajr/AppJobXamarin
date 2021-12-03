@@ -1,0 +1,1 @@
+C:\Git\Projetos\Xamarin\AppJobSearch\AppJobSearch\AppJobSearch.UWP\AppJobSearch.UWP.csproj;x86
