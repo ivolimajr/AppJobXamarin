@@ -3,3 +3,10 @@
 ################################################################################
 
 /.vs/AppJobSearch
+/AppJobSearch.iOS/obj
+/AppJobSearch.Android/bin
+/AppJobSearch.Android/obj
+/AppJobSearch/AppJobSearch/bin
+/AppJobSearch/AppJobSearch/obj
+bin
+obj

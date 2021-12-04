@@ -10,6 +10,7 @@
             <BoxView Color="#D7CCFF" HeightRequest="1"/>
             <!-- end:header-->
 
+            
             <!-- start:LoginForm-->
             <Grid VerticalOptions="CenterAndExpand">
                 
@@ -21,17 +22,24 @@
                     <RowDefinition />
                     <RowDefinition />
                     <RowDefinition />
+                    <RowDefinition />
                 </Grid.RowDefinitions>
-
-                <Frame StyleClass="EntryFrame" Grid.Row="0" Grid.ColumnSpan="2" >
+                <Label Text="Bem vindo ao Aplicativo" 
+                       TextColor="{StaticResource Purple}"
+                       FontSize="Large"
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center" 
+                       Grid.Row="0" 
+                       Grid.ColumnSpan="2"/>
+                <Frame StyleClass="EntryFrame" Grid.Row="1" Grid.ColumnSpan="2" >
                     <Entry Placeholder="Email" x:Name="Email"/>
                 </Frame>
-                <Frame StyleClass="EntryFrame" Grid.Row="1" Grid.ColumnSpan="2" >
+                <Frame StyleClass="EntryFrame" Grid.Row="2" Grid.ColumnSpan="2" >
                     <Entry Placeholder="Senha" IsPassword="true" x:Name="Password"/>
                 </Frame>               
                 
-                <Button Text="Entrar" Clicked="btnStartPage" Grid.Row="2"/>
-                <Button Text="Cadastrar" Clicked="btnRegisterPage" Grid.Row="2" Grid.Column="1"/>
+                <Button Text="Entrar" Clicked="btnStartPage" Grid.Row="3"/>
+                <Button Text="Cadastrar" Clicked="btnRegisterPage" Grid.Row="3" Grid.Column="1"/>
                 
             </Grid>
             <!-- end:LoginForm-->
