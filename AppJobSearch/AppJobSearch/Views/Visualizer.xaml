@@ -1,37 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Control="clr-namespace:AppJobSearch.Utility.Controls"
 			 x:Class="AppJobSearch.Views.Visualizer">
     <ContentPage.Content>
         <StackLayout>
-
-            <!-- start:header-->
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="50" />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40" />
                 </Grid.RowDefinitions>
-                <Label 
-					Text="JobSearch" 
-					Style="{StaticResource Title}" 
-					Grid.Column="1" />
-                <ImageButton 
-					Style="{StaticResource BackButton}"
-					Clicked="btnStartPage" />
+                <ImageButton Style="{StaticResource BackButton}" Clicked="btnStartPage"/>
+                <Label Text="Jobsearch" Style="{StaticResource Title}" Grid.Column="1" />
             </Grid>
-            <BoxView Color="#D7CCFF" HeightRequest="1"/>
-            <!-- end:header-->
-
+            <BoxView Color="#D7CCFF" HeightRequest="1" />
             <ScrollView>
                 <StackLayout>
-                    <!-- start:body-->
-                    <Grid RowSpacing="0">
+                    <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="3*"/>
-                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="2*" />
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition />
@@ -39,113 +30,56 @@
                             <RowDefinition />
                             <RowDefinition />
                             <RowDefinition />
-                            <RowDefinition />
                         </Grid.RowDefinitions>
-
-                        <Label Text="Digital Ocean"
-						   Style="{StaticResource TextSecondary}"/>
-                        <Label Text="Pub. 08/02/2020"
-					   Grid.Column="1"
-					   HorizontalOptions="End"
-					   Style="{StaticResource TextPrimary}"/>
-
-                        <Label Text="Back-End Develop"
-						   Grid.Row="1"
-						   Style="{StaticResource TextPrimary}"/>
-                        <Label Grid.Column="1"
-					   Grid.Row="1"
-					   HorizontalOptions="End"
-					   Style="{StaticResource IdLabel}">
+                        <Label Text="{Binding Company}" Style="{StaticResource TextSecondary}" />
+                        <Label Text="{Binding JobTitle}" Style="{StaticResource TextPrimary}" Grid.Row="1" />
+                        <Label Text="{Binding CityState}"  Style="{StaticResource TextSecondary}" Grid.Row="2"/>
+                        <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
                             <Label.FormattedText>
                                 <FormattedString>
-                                    <Span Text="id. "/>
-                                    <Span Text="1857"/>
+                                    <Span Text="{Binding InitialSalary}" Style="{StaticResource MoneyLabel}" />
+                                    <Span Text="-" Style="{StaticResource MoneyLabel}" />
+                                    <Span Text="{Binding FinalSalary}" Style="{StaticResource MoneyLabel}" />
+                                    <Span Text=" BRL" Style="{StaticResource CurrencyLabel}" />
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
+                        <Label Text="{Binding ContractType}" Style="{StaticResource TextPrimary}" Grid.Row="4"  />
 
-                        <Label Text="São Paulo, SP"
-						   Grid.Row="2"
-						   Style="{StaticResource TextSecondary}"/>
 
-                        <Label Grid.Row="3" Grid.ColumnSpan="2">
+
+                        <Label Grid.Row="0" Grid.Column="1" HorizontalOptions="End" Style="{StaticResource TextPrimary}" >
                             <Label.FormattedText>
-                                <FormattedString >
-                                    <Span Text="7.0-11k " Style="{StaticResource MoneyLabel}" FontSize="14"/>
-                                    <Span Text="BRL" Style="{StaticResource CurrencyLabel}" FontSize="14"/>
+                                <FormattedString>
+                                    <Span Text="Pub. " />
+                                    <Span Text="{Binding PublicationDate, StringFormat='{0:dd/MM/yyyy}'}}" />
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
-                        <Label Text="CLT"
-					   Grid.Row="4"
-					   Style="{StaticResource TextPrimary}"/>
 
-                        <Label Text="Tags" Grid.Row="5"/>
+                        <Label Grid.Row="1" Style="{StaticResource IdLabel}" Grid.Column="1">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="id. " />
+                                    <Span Text="{Binding Id}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
                     </Grid>
-                    <!-- end:body-->
 
-                    <Label Text="Interessados enviar e-mail para" Style="{StaticResource TextPrimary}"/>
-                    <Label Text="job@digitalocean.com.br" Style="{StaticResource TextSecondary}"/>
-                    <BoxView Color="#D7CCFF" HeightRequest="1"/>
+                    <Control:TagView Techonologies="{Binding TecnologyTools}"/>
 
-                    <Label Text="Descrição da empresa" Style="{StaticResource TitlePrimary}" Padding="0,15,0,0"/>
-                    <Label Text="O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar a 
-				   reestruturação dos paradigmas corporativos.
-				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar a 
-				   reestruturação dos paradigmas corporativos.
-				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
-				   a reestruturação dos paradigmas corporativos.
-				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
-				   a reestruturação dos paradigmas corporativos.
-				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
-				   a reestruturação dos paradigmas corporativos.
-				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
-				   a reestruturação dos paradigmas corporativos.
-				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
-				   a reestruturação dos paradigmas corporativos.
-				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
-				   a reestruturação dos paradigmas corporativos.
-				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
-				   a reestruturação dos paradigmas corporativos.
-				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
-				   a reestruturação dos paradigmas corporativos.
-				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar a 
-				   reestruturação dos paradigmas corporativos.
-				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
-				   a reestruturação dos paradigmas corporativos.
-				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
-				   a reestruturação dos paradigmas corporativos.
-				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
-				   a reestruturação dos paradigmas corporativos.
-				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
-				   a reestruturação dos paradigmas corporativos.
-				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
-				   a reestruturação dos paradigmas corporativos.
-				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
-				   a reestruturação dos paradigmas corporativos.
-				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
-				   a reestruturação dos paradigmas corporativos.
-				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
-				   a reestruturação dos paradigmas corporativos.
-				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar a 
-				   reestruturação dos paradigmas corporativos.
-				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
-				   a reestruturação dos paradigmas corporativos.
-				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
-				   a reestruturação dos paradigmas corporativos.
-				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
-				   a reestruturação dos paradigmas corporativos.
-				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
-				   a reestruturação dos paradigmas corporativos.
-				   O empenho em analisar a hegemonia do ambiente político pode nos levar a considerar 
-				   a reestruturação dos paradigmas corporativos." Style="{StaticResource TextPrimary}"/>
-                    <Label Text="Descrição do Trabalho" Style="{StaticResource TitlePrimary}" Padding="0,15,0,0"/>
-                    <Label Text="Implementar novas tecnologias de gerenciamento de servidores, fazer integração com ferramentas de VM" Style="{StaticResource TextPrimary}"/>
-                    <Label Text="Benefícios" Style="{StaticResource TitlePrimary}" Padding="0,15,0,0"/>
-                    <Label Text="Vale transporte e vale alimentação" Style="{StaticResource TextPrimary}"/>
+                    <Label  Style="{StaticResource TextPrimary}" Text="Interessados enviar e-mail para:" />
+                    <Label Style="{StaticResource TextSecondary}" Text="{Binding InterestedSendEmailTo}" />
+                    <BoxView Color="#F3F5F7" HeightRequest="1" />
+                    <Label Style="{StaticResource TitlePrimary}" Text="Descrição da empresa" x:Name="HeaderCompanyDescription" />
+                    <Label  Style="{StaticResource TextPrimary}" Text="{Binding CompanyDescription}" x:Name="TextCompanyDescription" />
+                    <Label Style="{StaticResource TitlePrimary}" Text="Descrição do trabalho" x:Name="HeaderJobDescription" />
+                    <Label  Style="{StaticResource TextPrimary}" Text="{Binding JobDescription}" x:Name="TextJobDescription" />
+                    <Label Style="{StaticResource TitlePrimary}" Text="Benefícios" x:Name="HeaderBenefits" />
+                    <Label  Style="{StaticResource TextPrimary}" Text="{Binding Benefits}" x:Name="TextBenefits" />
                 </StackLayout>
             </ScrollView>
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
